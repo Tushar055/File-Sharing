@@ -1,0 +1,32 @@
+ROAM to prev commits:
+
+git checkout old_commit_hash
+to go back to previous commit temporarily
+
+
+make changes, commits and then
+git switch -c 'new branch name'
+to retain the changes
+
+git switch -
+or
+git checkout master
+leave here as is, changes will be lost
+
+
+--------------------------------------------
+remove recent commits:
+git rebase -i HEAD~
+
+--------------------------------------------
+prevent accident: 
+git commit -m 'terrible'
+git reset HEAD~
+[make changes]
+git add .
+git commit -c ORIG_HEAD 
+or git commit -m 'updated good work'
+
+--------------------------------------------
+--force
+disaster!
